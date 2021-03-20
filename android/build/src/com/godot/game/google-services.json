@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "221575959238",
+    "project_id": "you-lose-godot",
+    "storage_bucket": "you-lose-godot.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221575959238:android:cbb5fe4a90ba0dc19cbdc7",
+        "android_client_info": {
+          "package_name": "com.you.lose"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "221575959238-5ded9rogsn5pgp5iv9otdaqo7j5rnmkm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5GZ5F-10C9UlhKz6nCh-ebmj_uHU8naE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "221575959238-5ded9rogsn5pgp5iv9otdaqo7j5rnmkm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

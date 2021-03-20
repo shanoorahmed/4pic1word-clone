@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Images/Newgame-PixTeller.png" type="Texture" id=1]
+[ext_resource path="res://Images/Rules-PixTeller.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/LoadGame.gd" type="Script" id=3]
+[ext_resource path="res://Images/Loadgame-PixTeller.png" type="Texture" id=4]
+
+[node name="LoadGame" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+margin_right = 576.0
+margin_bottom = 1024.0
+color = Color( 0.929412, 0.929412, 0.929412, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="LoginButtons" type="Node2D" parent="UI"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/LoginButtons"]
+margin_left = 63.0
+margin_top = 300.0
+margin_right = 513.0
+margin_bottom = 705.0
+custom_constants/separation = 35
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewGame" type="TextureButton" parent="UI/LoginButtons/VBoxContainer"]
+margin_top = 62.0
+margin_right = 450.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 200, 70 )
+focus_mode = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 1 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Rules" type="TextureButton" parent="UI/LoginButtons/VBoxContainer"]
+margin_top = 167.0
+margin_right = 450.0
+margin_bottom = 237.0
+rect_min_size = Vector2( 200, 70 )
+focus_mode = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="LoadGame" type="TextureButton" parent="UI/LoginButtons/VBoxContainer"]
+margin_top = 272.0
+margin_right = 450.0
+margin_bottom = 342.0
+rect_min_size = Vector2( 200, 70 )
+focus_mode = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 4 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+[connection signal="pressed" from="UI/LoginButtons/VBoxContainer/NewGame" to="." method="_on_NewGame_pressed"]
+[connection signal="pressed" from="UI/LoginButtons/VBoxContainer/Rules" to="." method="_on_Rules_pressed"]
+[connection signal="pressed" from="UI/LoginButtons/VBoxContainer/LoadGame" to="." method="_on_LoadGame_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
