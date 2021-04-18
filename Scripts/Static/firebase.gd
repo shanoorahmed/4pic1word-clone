@@ -1,8 +1,8 @@
 extends Node
 
 
-const API_KEY := "INSERT"
-const PROJECT_ID := "godot"
+const API_KEY := "AIzaSyDhgr-Xmn_7A0hRcH1peNYe02a3Cucu5yY"
+const PROJECT_ID := "you-lose-godot"
 
 const REGISTER_URL := "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=%s" % API_KEY
 const LOGIN_URL := "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=%s" % API_KEY

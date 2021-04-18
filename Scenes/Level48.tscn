@@ -1,0 +1,486 @@
+[gd_scene load_steps=52 format=2]
+
+[ext_resource path="res://Images/Letters/Normal/S.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Level48.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/NanumPenScript-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scripts/PicturesNode/PicturesNode1.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/NextNode/NextNode1.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/TryAgainNode/TryAgainNode1.gd" type="Script" id=6]
+[ext_resource path="res://Images/Others/Normal/trash-alt-regular.png" type="Texture" id=7]
+[ext_resource path="res://Images/Letters/Normal/T.png" type="Texture" id=8]
+[ext_resource path="res://Images/Letters/Normal/G.png" type="Texture" id=9]
+[ext_resource path="res://Images/Letters/Normal/E.png" type="Texture" id=10]
+[ext_resource path="res://Images/Letters/Normal/C.png" type="Texture" id=11]
+[ext_resource path="res://Images/Letters/Normal/O.png" type="Texture" id=12]
+[ext_resource path="res://Images/Letters/Normal/M.png" type="Texture" id=13]
+[ext_resource path="res://Images/Letters/Normal/A.png" type="Texture" id=14]
+[ext_resource path="res://Images/Letters/Pressed/L.png" type="Texture" id=15]
+[ext_resource path="res://Images/Letters/Pressed/S.png" type="Texture" id=16]
+[ext_resource path="res://Images/Letters/Normal/D.png" type="Texture" id=17]
+[ext_resource path="res://Images/Letters/Normal/L.png" type="Texture" id=18]
+[ext_resource path="res://Images/Letters/Normal/H.png" type="Texture" id=19]
+[ext_resource path="res://Images/Letters/Normal/R.png" type="Texture" id=20]
+[ext_resource path="res://Images/Letters/Normal/I.png" type="Texture" id=21]
+[ext_resource path="res://Images/Others/Normal/arrow-alt-circle-right-regular.png" type="Texture" id=22]
+[ext_resource path="res://Images/Letters/Pressed/U.png" type="Texture" id=23]
+[ext_resource path="res://Images/Letters/Normal/U.png" type="Texture" id=24]
+[ext_resource path="res://Images/Others/Normal/home-solid.png" type="Texture" id=25]
+[ext_resource path="res://Images/Letters/Pressed/G.png" type="Texture" id=26]
+[ext_resource path="res://Images/Others/Normal/ok.png" type="Texture" id=27]
+[ext_resource path="res://Images/Others/Pressed/arrow-circle-right-solid.png" type="Texture" id=28]
+[ext_resource path="res://Scripts/AnswerNode/AnswerNode1.gd" type="Script" id=29]
+[ext_resource path="res://Images/Letters/Pressed/R.png" type="Texture" id=30]
+[ext_resource path="res://Images/Letters/Pressed/E.png" type="Texture" id=31]
+[ext_resource path="res://Images/Letters/Pressed/D.png" type="Texture" id=32]
+[ext_resource path="res://Images/Levels/sherdil4.jpeg" type="Texture" id=33]
+[ext_resource path="res://Images/Letters/Pressed/A.png" type="Texture" id=34]
+[ext_resource path="res://Images/Letters/Pressed/O.png" type="Texture" id=35]
+[ext_resource path="res://Images/Letters/Pressed/H.png" type="Texture" id=36]
+[ext_resource path="res://Images/Letters/Pressed/M.png" type="Texture" id=37]
+[ext_resource path="res://Images/Levels/sherdil3.jpeg" type="Texture" id=38]
+[ext_resource path="res://Images/Letters/Pressed/I.png" type="Texture" id=39]
+[ext_resource path="res://Images/Letters/Pressed/C.png" type="Texture" id=40]
+[ext_resource path="res://Images/Levels/sherdil2.png" type="Texture" id=41]
+[ext_resource path="res://Images/Levels/sherdil1.jpeg" type="Texture" id=42]
+[ext_resource path="res://Images/Letters/Pressed/T.png" type="Texture" id=43]
+[ext_resource path="res://Images/Others/Pressed/OK.png" type="Texture" id=44]
+[ext_resource path="res://Images/Others/Normal/redo-solid.png" type="Texture" id=45]
+[ext_resource path="res://Images/Others/Pressed/delete.png" type="Texture" id=46]
+[ext_resource path="res://Images/Others/Normal/fast-forward-solid.png" type="Texture" id=47]
+[ext_resource path="res://Images/Others/Pressed/forward-solid.png" type="Texture" id=48]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 65
+font_data = ExtResource( 3 )
+
+[node name="Level48" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+margin_right = 576.0
+margin_bottom = 1024.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="SkipButton" type="TextureButton" parent="UI"]
+margin_left = 30.0
+margin_top = 20.0
+margin_right = 70.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 60, 60 )
+texture_normal = ExtResource( 47 )
+texture_pressed = ExtResource( 48 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelNumber" type="Label" parent="UI"]
+margin_left = 183.0
+margin_top = 15.0
+margin_right = 350.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 200, 70 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "LEVEL 48"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HomeButton" type="TextureButton" parent="UI"]
+margin_left = 490.0
+margin_top = 20.0
+margin_right = 550.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 60, 60 )
+texture_normal = ExtResource( 25 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PicturesNode" type="Node2D" parent="UI"]
+script = ExtResource( 4 )
+
+[node name="Pictures" type="VSplitContainer" parent="UI/PicturesNode"]
+margin_left = 30.0
+margin_top = 90.0
+margin_right = 546.0
+margin_bottom = 606.0
+rect_min_size = Vector2( 516, 516 )
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSplitContainer" type="HSplitContainer" parent="UI/PicturesNode/Pictures"]
+margin_right = 516.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 516, 248 )
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="UI/PicturesNode/Pictures/HSplitContainer"]
+margin_right = 248.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 248, 248 )
+texture = ExtResource( 42 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="UI/PicturesNode/Pictures/HSplitContainer"]
+margin_left = 268.0
+margin_right = 516.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 248, 248 )
+texture = ExtResource( 41 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSplitContainer2" type="HSplitContainer" parent="UI/PicturesNode/Pictures"]
+margin_top = 268.0
+margin_right = 516.0
+margin_bottom = 516.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="UI/PicturesNode/Pictures/HSplitContainer2"]
+margin_right = 248.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 248, 248 )
+texture = ExtResource( 38 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="UI/PicturesNode/Pictures/HSplitContainer2"]
+margin_left = 268.0
+margin_right = 516.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 248, 248 )
+texture = ExtResource( 33 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="move_tween" type="Tween" parent="UI/PicturesNode"]
+
+[node name="NextNode" type="Node2D" parent="UI"]
+position = Vector2( 576, 0 )
+script = ExtResource( 5 )
+
+[node name="Next" type="VBoxContainer" parent="UI/NextNode"]
+margin_left = 40.0
+margin_top = 90.0
+margin_right = 556.0
+margin_bottom = 606.0
+rect_min_size = Vector2( 516, 516 )
+custom_constants/separation = 40
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YouNotLose" type="Label" parent="UI/NextNode/Next"]
+margin_right = 516.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 450, 220 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Next Level"
+align = 1
+valign = 1
+
+[node name="NextButton" type="TextureButton" parent="UI/NextNode/Next"]
+margin_top = 260.0
+margin_right = 516.0
+margin_bottom = 360.0
+rect_min_size = Vector2( 200, 100 )
+texture_normal = ExtResource( 22 )
+texture_pressed = ExtResource( 28 )
+expand = true
+stretch_mode = 5
+
+[node name="next_tween" type="Tween" parent="UI/NextNode"]
+
+[node name="TryAgainNode" type="Node2D" parent="UI"]
+position = Vector2( -576, 0 )
+script = ExtResource( 6 )
+
+[node name="TryAgain" type="VBoxContainer" parent="UI/TryAgainNode"]
+margin_left = 20.0
+margin_top = 90.0
+margin_right = 536.0
+margin_bottom = 606.0
+rect_min_size = Vector2( 516, 516 )
+custom_constants/separation = 40
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YouLose" type="Label" parent="UI/TryAgainNode/TryAgain"]
+margin_right = 516.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 450, 220 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Try Again"
+align = 1
+valign = 1
+
+[node name="TryAgainButton" type="TextureButton" parent="UI/TryAgainNode/TryAgain"]
+margin_top = 260.0
+margin_right = 516.0
+margin_bottom = 360.0
+rect_min_size = Vector2( 200, 100 )
+texture_normal = ExtResource( 45 )
+expand = true
+stretch_mode = 5
+
+[node name="tryagain_tween" type="Tween" parent="UI/TryAgainNode"]
+
+[node name="AnswerNode" type="Node2D" parent="UI"]
+script = ExtResource( 29 )
+
+[node name="AnsweBox" type="VBoxContainer" parent="UI/AnswerNode"]
+margin_left = 30.0
+margin_top = 650.0
+margin_right = 546.0
+margin_bottom = 795.0
+rect_min_size = Vector2( 516, 144 )
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Answer" type="Label" parent="UI/AnswerNode/AnsweBox"]
+margin_right = 516.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 516, 70 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Answer"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/AnswerNode/AnsweBox"]
+margin_top = 75.0
+margin_right = 516.0
+margin_bottom = 145.0
+rect_min_size = Vector2( 516, 70 )
+
+[node name="OKButton" type="TextureButton" parent="UI/AnswerNode/AnsweBox/HBoxContainer"]
+margin_right = 256.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 256, 70 )
+texture_normal = ExtResource( 27 )
+texture_pressed = ExtResource( 44 )
+expand = true
+stretch_mode = 5
+
+[node name="DeleteButton" type="TextureButton" parent="UI/AnswerNode/AnsweBox/HBoxContainer"]
+margin_left = 260.0
+margin_right = 516.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 256, 70 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 46 )
+expand = true
+stretch_mode = 5
+
+[node name="Tween" type="Tween" parent="UI/AnswerNode"]
+
+[node name="LetterBox" type="VBoxContainer" parent="UI"]
+margin_left = 30.0
+margin_top = 835.0
+margin_right = 546.0
+margin_bottom = 979.0
+rect_min_size = Vector2( 516, 144 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line1" type="HBoxContainer" parent="UI/LetterBox"]
+margin_right = 516.0
+margin_bottom = 70.0
+
+[node name="LetterButton1" type="TextureButton" parent="UI/LetterBox/Line1"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 26 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LetterButton2" type="TextureButton" parent="UI/LetterBox/Line1"]
+margin_left = 74.0
+margin_right = 144.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture_normal = ExtResource( 24 )
+texture_pressed = ExtResource( 23 )
+expand = true
+
+[node name="LetterButton3" type="TextureButton" parent="UI/LetterBox/Line1"]
+margin_left = 148.0
+margin_right = 218.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 35 )
+expand = true
+
+[node name="LetterButton4" type="TextureButton" parent="UI/LetterBox/Line1"]
+margin_left = 222.0
+margin_right = 292.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture_normal = ExtResource( 19 )
+texture_pressed = ExtResource( 36 )
+expand = true
+
+[node name="LetterButton5" type="TextureButton" parent="UI/LetterBox/Line1"]
+margin_left = 296.0
+margin_right = 366.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 37 )
+expand = true
+
+[node name="LetterButton6" type="TextureButton" parent="UI/LetterBox/Line1"]
+margin_left = 370.0
+margin_right = 440.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 15 )
+expand = true
+
+[node name="LetterButton7" type="TextureButton" parent="UI/LetterBox/Line1"]
+margin_left = 444.0
+margin_right = 514.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 40 )
+expand = true
+
+[node name="Line2" type="HBoxContainer" parent="UI/LetterBox"]
+margin_top = 74.0
+margin_right = 516.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 516, 70 )
+
+[node name="LetterButton8" type="TextureButton" parent="UI/LetterBox/Line2"]
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 30 )
+expand = true
+
+[node name="LetterButton9" type="TextureButton" parent="UI/LetterBox/Line2"]
+margin_left = 74.0
+margin_right = 144.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 31 )
+expand = true
+
+[node name="LetterButton10" type="TextureButton" parent="UI/LetterBox/Line2"]
+margin_left = 148.0
+margin_right = 218.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 34 )
+expand = true
+
+[node name="LetterButton11" type="TextureButton" parent="UI/LetterBox/Line2"]
+margin_left = 222.0
+margin_right = 292.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 43 )
+expand = true
+
+[node name="LetterButton12" type="TextureButton" parent="UI/LetterBox/Line2"]
+margin_left = 296.0
+margin_right = 366.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 32 )
+expand = true
+
+[node name="LetterButton13" type="TextureButton" parent="UI/LetterBox/Line2"]
+margin_left = 370.0
+margin_right = 440.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 16 )
+expand = true
+
+[node name="LetterButton14" type="TextureButton" parent="UI/LetterBox/Line2"]
+margin_left = 444.0
+margin_right = 514.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 39 )
+expand = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+[connection signal="pressed" from="UI/SkipButton" to="." method="_on_SkipButton_pressed"]
+[connection signal="pressed" from="UI/HomeButton" to="." method="_on_HomeButton_pressed"]
+[connection signal="pressed" from="UI/NextNode/Next/NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="pressed" from="UI/TryAgainNode/TryAgain/TryAgainButton" to="." method="_on_TryAgainButton_pressed"]
+[connection signal="pressed" from="UI/AnswerNode/AnsweBox/HBoxContainer/OKButton" to="." method="_on_OKButton_pressed"]
+[connection signal="pressed" from="UI/AnswerNode/AnsweBox/HBoxContainer/DeleteButton" to="." method="_on_DeleteButton_pressed"]
+[connection signal="pressed" from="UI/LetterBox/Line1/LetterButton1" to="." method="_on_LetterButton1_pressed"]
+[connection signal="pressed" from="UI/LetterBox/Line1/LetterButton2" to="." method="_on_LetterButton2_pressed"]
+[connection signal="pressed" from="UI/LetterBox/Line1/LetterButton3" to="." method="_on_LetterButton3_pressed"]
+[connection signal="pressed" from="UI/LetterBox/Line1/LetterButton4" to="." method="_on_LetterButton4_pressed"]
+[connection signal="pressed" from="UI/LetterBox/Line1/LetterButton5" to="." method="_on_LetterButton5_pressed"]
+[connection signal="pressed" from="UI/LetterBox/Line1/LetterButton6" to="." method="_on_LetterButton6_pressed"]
+[connection signal="pressed" from="UI/LetterBox/Line1/LetterButton7" to="." method="_on_LetterButton7_pressed"]
+[connection signal="pressed" from="UI/LetterBox/Line2/LetterButton8" to="." method="_on_LetterButton8_pressed"]
+[connection signal="pressed" from="UI/LetterBox/Line2/LetterButton9" to="." method="_on_LetterButton9_pressed"]
+[connection signal="pressed" from="UI/LetterBox/Line2/LetterButton10" to="." method="_on_LetterButton10_pressed"]
+[connection signal="pressed" from="UI/LetterBox/Line2/LetterButton11" to="." method="_on_LetterButton11_pressed"]
+[connection signal="pressed" from="UI/LetterBox/Line2/LetterButton12" to="." method="_on_LetterButton12_pressed"]
+[connection signal="pressed" from="UI/LetterBox/Line2/LetterButton13" to="." method="_on_LetterButton13_pressed"]
+[connection signal="pressed" from="UI/LetterBox/Line2/LetterButton14" to="." method="_on_LetterButton14_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]

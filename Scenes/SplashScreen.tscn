@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Images/SplashScreen.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/SplashScreen.gd" type="Script" id=2]
+[ext_resource path="res://Images/Loadingbar-PixTeller.png" type="Texture" id=3]
+[ext_resource path="res://Images/Progressbar-PixTeller.png" type="Texture" id=4]
+[ext_resource path="res://Fonts/NanumPenScript-Regular.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 5 )
+
+[node name="SplashScreen" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 576, 1024 )
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadingBar" type="TextureProgress" parent="Background"]
+margin_top = 960.0
+margin_right = 576.0
+margin_bottom = 1020.0
+rect_min_size = Vector2( 576, 60 )
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loading" type="Label" parent="Background/LoadingBar"]
+margin_right = 300.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 576, 60 )
+custom_fonts/font = SubResource( 1 )
+text = "Loading...."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="Background"]
+autostart = true
+[connection signal="timeout" from="Background/Timer" to="." method="_on_Timer_timeout"]

@@ -3,15 +3,17 @@ extends Node2D
 
 onready var http : HTTPRequest = $HTTPRequest
 
-var time = 0
-var mins = 0
-var timer_on = true
 var s = 0
+var hr_in = 0
+var min_in = 0
 var new_profile := false
 var information_sent := false
 var profile := {
 	"level": {},
-	"score": {}
+	"score": {},
+	"hour": {},
+	"minute": {},
+	"actual_time": {}
 }
 
 var answer = []
@@ -21,40 +23,63 @@ func _ready():
 	Firebase.get_document("users/%s" % Firebase.user_info.id, http)
 
 
+func _on_HomeButton_pressed():
+	get_tree().change_scene("res://Scenes/LoadGame.tscn")
+
+
 func _process(delta):
 	get_node("UI/AnswerNode/AnsweBox/Answer").text = str(answer)
-	if(timer_on):
-		time += delta
-		mins = floor(time/60)
-
-
-func _on_HomeButton_pressed():
-	get_tree().change_scene("res://Scenes/Game.tscn")
 
 
 func _on_NextButton_pressed():
-	var l = 1
-	if(mins<2):
+	var l = 4
+	var time = OS.get_time()
+	var hour = int(time.hour)
+	var minute = int(time.minute)
+	var mins
+	if(hour-hr_in==0):
+		mins = minute-min_in
+	elif(hour-hr_in==1):
+		mins = minute+60-min_in
+	if(mins<10):
+		s += 20
+	elif(mins<15):
+		s += 18
+	elif(mins<20):
+		s += 16
+	elif(mins<25):
+		s += 14
+	elif(mins<30):
+		s += 12
+	elif(mins<35):
 		s += 10
+	elif(mins<40):
+		s += 8
+	elif(mins<45):
+		s += 6
+	elif(mins<50):
+		s += 4
 	else:
-		s += (10/mins)
+		s += 2
 	profile.level = { "integerValue": l }
 	profile.score = { "integerValue": s }
+	profile.hour = { "integerValue": hour }
+	profile.minute = { "integerValue": minute }
+	profile.actual_time = { "stringValue": String(time) }
 	match new_profile:
 		true:
 			Firebase.save_document("users?documentId=%s" % Firebase.user_info.id, profile, http)
 		false:
 			Firebase.update_document("users/%s" % Firebase.user_info.id, profile, http)
 	information_sent = true
-	yield(get_tree().create_timer(2.0), "timeout")
-	get_tree().change_scene("res://Scenes/Level1.tscn")
+	yield(get_tree().create_timer(1.0), "timeout")
+	get_tree().change_scene("res://Scenes/Level4.tscn")
 
 
 func _on_TryAgainButton_pressed():
 	get_node("UI/PicturesNode").move(Vector2(0,0))
 	get_node("UI/TryAgainNode").move(Vector2(-576,0))
 	get_node("UI/AnswerNode").move(Vector2(0,0))
-	timer_on = true
 
 
 func _on_DeleteButton_pressed():
@@ -132,7 +157,6 @@ func _on_LetterButton14_pressed():
 
 
 func _on_OKButton_pressed():
-	timer_on = false
 	if(str(answer) == "[F, I, R, M]"):
 		get_node("UI/PicturesNode").move(Vector2(-576,0))
 		get_node("UI/NextNode").move(Vector2(0,0))
@@ -146,6 +170,8 @@ func _on_OKButton_pressed():
 func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 	var result_body := JSON.parse(body.get_string_from_ascii()).result as Dictionary
 	s += int(result_body.fields.score.integerValue)
+	hr_in += int(result_body.fields.hour.integerValue)
+	min_in += int(result_body.fields.minute.integerValue)
 	match response_code:
 		404:
 			new_profile = true
@@ -157,5 +183,21 @@ func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 
 
 func _on_SkipButton_pressed():
-	yield(get_tree().create_timer(2.0), "timeout")
-	get_tree().change_scene("res://Scenes/Level1.tscn")
+	var l = 4
+	s += 0
+	var time = OS.get_time()
+	var hour = int(time.hour)
+	var minute = int(time.minute)
+	profile.level = { "integerValue": l }
+	profile.score = { "integerValue": s }
+	profile.hour = { "integerValue": hour }
+	profile.minute = { "integerValue": minute }
+	profile.actual_time = { "stringValue": String(time) }
+	match new_profile:
+		true:
+			Firebase.save_document("users?documentId=%s" % Firebase.user_info.id, profile, http)
+		false:
+			Firebase.update_document("users/%s" % Firebase.user_info.id, profile, http)
+	information_sent = true
+	yield(get_tree().create_timer(1.0), "timeout")
+	get_tree().change_scene("res://Scenes/Level4.tscn")

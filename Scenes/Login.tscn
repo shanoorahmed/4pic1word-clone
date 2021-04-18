@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Fonts/NanumPenScript-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Login.gd" type="Script" id=2]
-[ext_resource path="res://Images/home-solid.png" type="Texture" id=3]
-[ext_resource path="res://Images/Login.png" type="Texture" id=4]
+[ext_resource path="res://Images/Others/Normal/Login.png" type="Texture" id=3]
+[ext_resource path="res://Images/Others/Normal/home-solid.png" type="Texture" id=4]
 [ext_resource path="res://Fonts/Varela-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Images/Others/Pressed/LOGIN-PixTeller.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -39,7 +40,7 @@ margin_top = 20.0
 margin_right = 550.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 60, 60 )
-texture_normal = ExtResource( 3 )
+texture_normal = ExtResource( 4 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -76,35 +77,25 @@ __meta__ = {
 margin_left = 30.0
 margin_top = 350.0
 margin_right = 546.0
-margin_bottom = 700.0
-rect_min_size = Vector2( 516, 320 )
-custom_constants/separation = 5
+margin_bottom = 600.0
+rect_min_size = Vector2( 516, 260 )
+custom_constants/separation = 10
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RollNumber" type="LineEdit" parent="UI/VBoxContainer"]
+[node name="Email" type="LineEdit" parent="UI/VBoxContainer"]
 margin_right = 516.0
 margin_bottom = 80.0
-rect_min_size = Vector2( 516, 80 )
-custom_fonts/font = SubResource( 3 )
-align = 1
-max_length = 9
-placeholder_text = "Enter roll number"
-
-[node name="Email" type="LineEdit" parent="UI/VBoxContainer"]
-margin_top = 85.0
-margin_right = 516.0
-margin_bottom = 165.0
 rect_min_size = Vector2( 516, 80 )
 custom_fonts/font = SubResource( 3 )
 align = 1
 placeholder_text = "Enter email"
 
 [node name="Password" type="LineEdit" parent="UI/VBoxContainer"]
-margin_top = 170.0
+margin_top = 90.0
 margin_right = 516.0
-margin_bottom = 250.0
+margin_bottom = 170.0
 rect_min_size = Vector2( 516, 80 )
 custom_fonts/font = SubResource( 3 )
 align = 1
@@ -113,11 +104,12 @@ secret = true
 placeholder_text = "Enter password"
 
 [node name="LoginButton" type="TextureButton" parent="UI/VBoxContainer"]
-margin_top = 255.0
+margin_top = 180.0
 margin_right = 516.0
-margin_bottom = 335.0
+margin_bottom = 260.0
 rect_min_size = Vector2( 516, 80 )
-texture_normal = ExtResource( 4 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 6 )
 expand = true
 stretch_mode = 5
 

@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Images/Newgame-PixTeller.png" type="Texture" id=1]
-[ext_resource path="res://Images/Rules-PixTeller.png" type="Texture" id=2]
+[ext_resource path="res://Images/Others/Normal/Newgame-PixTeller.png" type="Texture" id=1]
+[ext_resource path="res://Images/Others/Normal/Loadgame-PixTeller.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/LoadGame.gd" type="Script" id=3]
-[ext_resource path="res://Images/Loadgame-PixTeller.png" type="Texture" id=4]
+[ext_resource path="res://Images/Others/Normal/Rules-PixTeller.png" type="Texture" id=4]
+[ext_resource path="res://Images/Others/Pressed/Newgame-PixTeller.png" type="Texture" id=5]
+[ext_resource path="res://Images/Others/Pressed/RULES-PixTeller.png" type="Texture" id=6]
+[ext_resource path="res://Images/Others/Pressed/LOADGAME-PixTeller.png" type="Texture" id=7]
+[ext_resource path="res://Fonts/NanumPenScript-Regular.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 8 )
 
 [node name="LoadGame" type="Node2D"]
 script = ExtResource( 3 )
@@ -23,24 +31,35 @@ __meta__ = {
 [node name="LoginButtons" type="Node2D" parent="UI"]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/LoginButtons"]
-margin_left = 63.0
+margin_left = 50.0
 margin_top = 300.0
-margin_right = 513.0
-margin_bottom = 705.0
-custom_constants/separation = 35
+margin_right = 526.0
+margin_bottom = 650.0
+rect_min_size = Vector2( 476, 350 )
+custom_constants/separation = 20
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="RollNumber" type="LineEdit" parent="UI/LoginButtons/VBoxContainer"]
+margin_right = 476.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 476, 80 )
+custom_fonts/font = SubResource( 1 )
+align = 1
+max_length = 9
+placeholder_text = "Enter Roll Number"
+
 [node name="NewGame" type="TextureButton" parent="UI/LoginButtons/VBoxContainer"]
-margin_top = 62.0
-margin_right = 450.0
-margin_bottom = 132.0
+margin_top = 100.0
+margin_right = 476.0
+margin_bottom = 170.0
 rect_min_size = Vector2( 200, 70 )
 focus_mode = 0
 enabled_focus_mode = 0
 texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 5 )
 expand = true
 stretch_mode = 5
 __meta__ = {
@@ -48,13 +67,14 @@ __meta__ = {
 }
 
 [node name="Rules" type="TextureButton" parent="UI/LoginButtons/VBoxContainer"]
-margin_top = 167.0
-margin_right = 450.0
-margin_bottom = 237.0
+margin_top = 190.0
+margin_right = 476.0
+margin_bottom = 260.0
 rect_min_size = Vector2( 200, 70 )
 focus_mode = 0
 enabled_focus_mode = 0
-texture_normal = ExtResource( 2 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 6 )
 expand = true
 stretch_mode = 5
 __meta__ = {
@@ -62,13 +82,14 @@ __meta__ = {
 }
 
 [node name="LoadGame" type="TextureButton" parent="UI/LoginButtons/VBoxContainer"]
-margin_top = 272.0
-margin_right = 450.0
-margin_bottom = 342.0
+margin_top = 280.0
+margin_right = 476.0
+margin_bottom = 350.0
 rect_min_size = Vector2( 200, 70 )
 focus_mode = 0
 enabled_focus_mode = 0
-texture_normal = ExtResource( 4 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 7 )
 expand = true
 stretch_mode = 5
 __meta__ = {

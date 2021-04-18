@@ -15,9 +15,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="You Lose"
-run/main_scene="res://Scenes/Game.tscn"
-boot_splash/image="res://SplashScreen.png"
+config/name="WordTraps"
+run/main_scene="res://Scenes/SplashScreen.tscn"
 boot_splash/bg_color=Color( 0.0117647, 0.0823529, 0.145098, 1 )
 config/icon="res://icon.png"
 
@@ -26,6 +25,7 @@ config/icon="res://icon.png"
 Firebase="*res://Scripts/Static/firebase.gd"
 Register="*res://Scripts/Register.gd"
 Login="*res://Scripts/Login.gd"
+SplashScreen="*res://Scripts/SplashScreen.gd"
 
 [display]
 

@@ -1,34 +1,53 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=52 format=2]
 
-[ext_resource path="res://Images/E.png" type="Texture" id=1]
+[ext_resource path="res://Images/Levels/L2-3.jpeg" type="Texture" id=1]
 [ext_resource path="res://Scripts/Level2.gd" type="Script" id=2]
 [ext_resource path="res://Fonts/NanumPenScript-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Scripts/PicturesNode/PicturesNode1.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/NextNode/NextNode1.gd" type="Script" id=5]
 [ext_resource path="res://Scripts/TryAgainNode/TryAgainNode1.gd" type="Script" id=6]
-[ext_resource path="res://Images/home-solid.png" type="Texture" id=7]
-[ext_resource path="res://Images/arrow-circle-right-solid.png" type="Texture" id=8]
-[ext_resource path="res://Images/Try Again.jpg" type="Texture" id=9]
-[ext_resource path="res://Images/ok.png" type="Texture" id=10]
-[ext_resource path="res://Images/I.png" type="Texture" id=11]
-[ext_resource path="res://Images/L.png" type="Texture" id=12]
-[ext_resource path="res://Images/delete.png" type="Texture" id=13]
-[ext_resource path="res://Images/K.png" type="Texture" id=14]
-[ext_resource path="res://Images/L2-3.jpeg" type="Texture" id=15]
-[ext_resource path="res://Images/L2-4.jpeg" type="Texture" id=16]
-[ext_resource path="res://Images/L2-2.jpeg" type="Texture" id=17]
-[ext_resource path="res://Images/C.png" type="Texture" id=18]
-[ext_resource path="res://Images/P.png" type="Texture" id=19]
-[ext_resource path="res://Images/B.png" type="Texture" id=20]
-[ext_resource path="res://Images/G.png" type="Texture" id=21]
-[ext_resource path="res://Images/O.png" type="Texture" id=22]
-[ext_resource path="res://Images/T.png" type="Texture" id=23]
-[ext_resource path="res://Images/L2-1.jpeg" type="Texture" id=24]
-[ext_resource path="res://Images/A.png" type="Texture" id=25]
-[ext_resource path="res://Images/D.png" type="Texture" id=26]
-[ext_resource path="res://Images/N.png" type="Texture" id=27]
-[ext_resource path="res://Images/F.png" type="Texture" id=28]
+[ext_resource path="res://Images/Levels/L2-1.jpeg" type="Texture" id=7]
+[ext_resource path="res://Images/Others/Normal/trash-alt-regular.png" type="Texture" id=8]
+[ext_resource path="res://Images/Letters/Normal/T.png" type="Texture" id=9]
+[ext_resource path="res://Images/Letters/Normal/E.png" type="Texture" id=10]
+[ext_resource path="res://Images/Letters/Normal/C.png" type="Texture" id=11]
+[ext_resource path="res://Images/Letters/Normal/O.png" type="Texture" id=12]
+[ext_resource path="res://Images/Letters/Normal/B.png" type="Texture" id=13]
+[ext_resource path="res://Images/Letters/Normal/A.png" type="Texture" id=14]
+[ext_resource path="res://Images/Letters/Normal/N.png" type="Texture" id=15]
+[ext_resource path="res://Images/Letters/Normal/P.png" type="Texture" id=16]
+[ext_resource path="res://Images/Letters/Normal/K.png" type="Texture" id=17]
+[ext_resource path="res://Images/Levels/L2-2.jpeg" type="Texture" id=18]
+[ext_resource path="res://Images/Letters/Normal/L.png" type="Texture" id=19]
+[ext_resource path="res://Images/Letters/Normal/D.png" type="Texture" id=20]
+[ext_resource path="res://Images/Letters/Normal/F.png" type="Texture" id=21]
+[ext_resource path="res://Images/Letters/Normal/I.png" type="Texture" id=22]
+[ext_resource path="res://Images/Others/Normal/arrow-alt-circle-right-regular.png" type="Texture" id=23]
+[ext_resource path="res://Images/Levels/L2-4.jpeg" type="Texture" id=24]
+[ext_resource path="res://Images/Others/Normal/home-solid.png" type="Texture" id=25]
+[ext_resource path="res://Images/Others/Normal/ok.png" type="Texture" id=26]
+[ext_resource path="res://Images/Others/Pressed/arrow-circle-right-solid.png" type="Texture" id=27]
+[ext_resource path="res://Images/Letters/Normal/G.png" type="Texture" id=28]
 [ext_resource path="res://Scripts/AnswerNode/AnswerNode1.gd" type="Script" id=29]
+[ext_resource path="res://Images/Letters/Pressed/G.png" type="Texture" id=30]
+[ext_resource path="res://Images/Letters/Pressed/E.png" type="Texture" id=31]
+[ext_resource path="res://Images/Letters/Pressed/D.png" type="Texture" id=32]
+[ext_resource path="res://Images/Letters/Pressed/N.png" type="Texture" id=33]
+[ext_resource path="res://Images/Letters/Pressed/P.png" type="Texture" id=34]
+[ext_resource path="res://Images/Letters/Pressed/L.png" type="Texture" id=35]
+[ext_resource path="res://Images/Letters/Pressed/A.png" type="Texture" id=36]
+[ext_resource path="res://Images/Letters/Pressed/O.png" type="Texture" id=37]
+[ext_resource path="res://Images/Letters/Pressed/I.png" type="Texture" id=38]
+[ext_resource path="res://Images/Letters/Pressed/C.png" type="Texture" id=39]
+[ext_resource path="res://Images/Letters/Pressed/K.png" type="Texture" id=40]
+[ext_resource path="res://Images/Letters/Pressed/F.png" type="Texture" id=41]
+[ext_resource path="res://Images/Letters/Pressed/T.png" type="Texture" id=42]
+[ext_resource path="res://Images/Letters/Pressed/B.png" type="Texture" id=43]
+[ext_resource path="res://Images/Others/Pressed/OK.png" type="Texture" id=44]
+[ext_resource path="res://Images/Others/Normal/redo-solid.png" type="Texture" id=45]
+[ext_resource path="res://Images/Others/Pressed/delete.png" type="Texture" id=46]
+[ext_resource path="res://Images/Others/Pressed/forward-solid.png" type="Texture" id=47]
+[ext_resource path="res://Images/Others/Normal/fast-forward-solid.png" type="Texture" id=48]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -62,7 +81,8 @@ margin_top = 20.0
 margin_right = 70.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 60 )
-texture_normal = ExtResource( 8 )
+texture_normal = ExtResource( 48 )
+texture_pressed = ExtResource( 47 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -89,7 +109,7 @@ margin_top = 20.0
 margin_right = 550.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 60, 60 )
-texture_normal = ExtResource( 7 )
+texture_normal = ExtResource( 25 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -122,7 +142,7 @@ __meta__ = {
 margin_right = 248.0
 margin_bottom = 248.0
 rect_min_size = Vector2( 248, 248 )
-texture = ExtResource( 24 )
+texture = ExtResource( 7 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -133,7 +153,7 @@ margin_left = 268.0
 margin_right = 516.0
 margin_bottom = 248.0
 rect_min_size = Vector2( 248, 248 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -152,7 +172,7 @@ __meta__ = {
 margin_right = 248.0
 margin_bottom = 248.0
 rect_min_size = Vector2( 248, 248 )
-texture = ExtResource( 15 )
+texture = ExtResource( 1 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -163,7 +183,7 @@ margin_left = 268.0
 margin_right = 516.0
 margin_bottom = 248.0
 rect_min_size = Vector2( 248, 248 )
-texture = ExtResource( 16 )
+texture = ExtResource( 24 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -192,7 +212,7 @@ margin_bottom = 220.0
 rect_min_size = Vector2( 450, 220 )
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "You Not Lose"
+text = "Next Level"
 align = 1
 valign = 1
 
@@ -201,7 +221,8 @@ margin_top = 260.0
 margin_right = 516.0
 margin_bottom = 360.0
 rect_min_size = Vector2( 200, 100 )
-texture_normal = ExtResource( 8 )
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 27 )
 expand = true
 stretch_mode = 5
 
@@ -228,7 +249,7 @@ margin_bottom = 220.0
 rect_min_size = Vector2( 450, 220 )
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "You Lose"
+text = "Try Again"
 align = 1
 valign = 1
 
@@ -237,7 +258,7 @@ margin_top = 260.0
 margin_right = 516.0
 margin_bottom = 360.0
 rect_min_size = Vector2( 200, 100 )
-texture_normal = ExtResource( 9 )
+texture_normal = ExtResource( 45 )
 expand = true
 stretch_mode = 5
 
@@ -277,7 +298,8 @@ rect_min_size = Vector2( 516, 70 )
 margin_right = 256.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 256, 70 )
-texture_normal = ExtResource( 10 )
+texture_normal = ExtResource( 26 )
+texture_pressed = ExtResource( 44 )
 expand = true
 stretch_mode = 5
 
@@ -286,7 +308,8 @@ margin_left = 260.0
 margin_right = 516.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 256, 70 )
-texture_normal = ExtResource( 13 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 46 )
 expand = true
 stretch_mode = 5
 
@@ -310,7 +333,8 @@ margin_bottom = 70.0
 margin_right = 70.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 70, 70 )
-texture_normal = ExtResource( 25 )
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 36 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -321,7 +345,8 @@ margin_left = 74.0
 margin_right = 144.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 70, 70 )
-texture_normal = ExtResource( 11 )
+texture_normal = ExtResource( 22 )
+texture_pressed = ExtResource( 38 )
 expand = true
 
 [node name="LetterButton3" type="TextureButton" parent="UI/LetterBox/Line1"]
@@ -329,7 +354,8 @@ margin_left = 148.0
 margin_right = 218.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 70, 70 )
-texture_normal = ExtResource( 22 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 37 )
 expand = true
 
 [node name="LetterButton4" type="TextureButton" parent="UI/LetterBox/Line1"]
@@ -337,7 +363,8 @@ margin_left = 222.0
 margin_right = 292.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 70, 70 )
-texture_normal = ExtResource( 19 )
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 34 )
 expand = true
 
 [node name="LetterButton5" type="TextureButton" parent="UI/LetterBox/Line1"]
@@ -345,7 +372,8 @@ margin_left = 296.0
 margin_right = 366.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 70, 70 )
-texture_normal = ExtResource( 26 )
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 32 )
 expand = true
 
 [node name="LetterButton6" type="TextureButton" parent="UI/LetterBox/Line1"]
@@ -353,7 +381,8 @@ margin_left = 370.0
 margin_right = 440.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 70, 70 )
-texture_normal = ExtResource( 20 )
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 43 )
 expand = true
 
 [node name="LetterButton7" type="TextureButton" parent="UI/LetterBox/Line1"]
@@ -361,7 +390,8 @@ margin_left = 444.0
 margin_right = 514.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 70, 70 )
-texture_normal = ExtResource( 21 )
+texture_normal = ExtResource( 28 )
+texture_pressed = ExtResource( 30 )
 expand = true
 
 [node name="Line2" type="HBoxContainer" parent="UI/LetterBox"]
@@ -374,7 +404,8 @@ rect_min_size = Vector2( 516, 70 )
 margin_right = 70.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 70, 70 )
-texture_normal = ExtResource( 12 )
+texture_normal = ExtResource( 19 )
+texture_pressed = ExtResource( 35 )
 expand = true
 
 [node name="LetterButton9" type="TextureButton" parent="UI/LetterBox/Line2"]
@@ -382,7 +413,8 @@ margin_left = 74.0
 margin_right = 144.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 70, 70 )
-texture_normal = ExtResource( 1 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 31 )
 expand = true
 
 [node name="LetterButton10" type="TextureButton" parent="UI/LetterBox/Line2"]
@@ -390,7 +422,8 @@ margin_left = 148.0
 margin_right = 218.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 70, 70 )
-texture_normal = ExtResource( 14 )
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 40 )
 expand = true
 
 [node name="LetterButton11" type="TextureButton" parent="UI/LetterBox/Line2"]
@@ -398,7 +431,8 @@ margin_left = 222.0
 margin_right = 292.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 70, 70 )
-texture_normal = ExtResource( 28 )
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 41 )
 expand = true
 
 [node name="LetterButton12" type="TextureButton" parent="UI/LetterBox/Line2"]
@@ -406,7 +440,8 @@ margin_left = 296.0
 margin_right = 366.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 70, 70 )
-texture_normal = ExtResource( 23 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 42 )
 expand = true
 
 [node name="LetterButton13" type="TextureButton" parent="UI/LetterBox/Line2"]
@@ -414,7 +449,8 @@ margin_left = 370.0
 margin_right = 440.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 70, 70 )
-texture_normal = ExtResource( 27 )
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 33 )
 expand = true
 
 [node name="LetterButton14" type="TextureButton" parent="UI/LetterBox/Line2"]
@@ -422,12 +458,11 @@ margin_left = 444.0
 margin_right = 514.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 70, 70 )
-texture_normal = ExtResource( 18 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 39 )
 expand = true
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
-
-[node name="Timer" type="Timer" parent="."]
 [connection signal="pressed" from="UI/SkipButton" to="." method="_on_SkipButton_pressed"]
 [connection signal="pressed" from="UI/HomeButton" to="." method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="UI/NextNode/Next/NextButton" to="." method="_on_NextButton_pressed"]

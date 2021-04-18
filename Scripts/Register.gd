@@ -2,7 +2,6 @@ extends Node2D
 
 
 onready var http : HTTPRequest = $HTTPRequest
-onready var rollnumber : LineEdit = $UI/VBoxContainer/RollNumber
 onready var email : LineEdit = $UI/VBoxContainer/Email
 onready var password : LineEdit = $UI/VBoxContainer/Password
 onready var confirm : LineEdit = $UI/VBoxContainer/ConfirmPassword
@@ -23,12 +22,12 @@ func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 		notification.text = response_body.result.error.message.capitalize()
 	else:
 		notification.text = "Registration done!"
-		yield(get_tree().create_timer(2.0), "timeout")
+		yield(get_tree().create_timer(1.0), "timeout")
 		get_tree().change_scene("res://Scenes/Login.tscn")
 
 
 func _on_RegisterButton_pressed():
-	if password.text != confirm.text or rollnumber.text.empty() or str(rollnumber.text).length()!=9 or email.text.empty() or password.text.empty():
+	if password.text != confirm.text or email.text.empty() or password.text.empty():
 		notification.text = "Invalid entry!!"
 		return
 	Firebase.register(email.text, password.text, http)

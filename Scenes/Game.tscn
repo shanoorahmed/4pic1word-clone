@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Fonts/NanumPenScript-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=2]
-[ext_resource path="res://Images/Register.png" type="Texture" id=3]
-[ext_resource path="res://Images/Login.png" type="Texture" id=4]
+[ext_resource path="res://Images/Others/Normal/Login.png" type="Texture" id=3]
+[ext_resource path="res://Images/Others/Normal/Register.png" type="Texture" id=4]
+[ext_resource path="res://Images/Others/Pressed/REGISTER-PixTeller.png" type="Texture" id=5]
+[ext_resource path="res://Images/Others/Pressed/LOGIN-PixTeller.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -30,7 +32,7 @@ margin_right = 576.0
 margin_bottom = 343.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "You Lose"
+text = "Word Traps"
 align = 1
 valign = 1
 __meta__ = {
@@ -57,7 +59,8 @@ margin_bottom = 185.0
 rect_min_size = Vector2( 200, 70 )
 focus_mode = 0
 enabled_focus_mode = 0
-texture_normal = ExtResource( 4 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 6 )
 expand = true
 stretch_mode = 5
 __meta__ = {
@@ -71,7 +74,8 @@ margin_bottom = 290.0
 rect_min_size = Vector2( 200, 70 )
 focus_mode = 0
 enabled_focus_mode = 0
-texture_normal = ExtResource( 3 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
 expand = true
 stretch_mode = 5
 __meta__ = {
